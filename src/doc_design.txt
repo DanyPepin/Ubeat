@@ -1,0 +1,145 @@
+Équipe: 012
+Virginie Dastous, VIDAS4, 111 224 725
+Gabriel Bussières, gabus12, 111 239 137
+Thomas Ferland, thder6, 111 186 631
+Dany Pépin, Dapep19, 111 147 623
+
+Pour lancer l'App:
+npm install
+npm run serve
+
+les paths:
+Home: /(localhost.../#/)
+Album: /Album (localhost.../#/Album:id)
+Artist: /Artist (localhost.../#/Artist:id)
+Playlist: /Playlist (localhost.../#/Playlist)
+SignUp: (http://localhost:8080/#/signup)
+Login : (http://localhost:8080/#/login)
+User: (http://localhost:8080/#/user/:id)
+
+
+Procédure pour utiliser l'App
+
+*Vous ne pouvez pas utiliser l'app sans être login. Vous pouvez utiliser le compte e@e password: e
+pour pouvoir avoir deja des playlists.
+
+**les actions de validations d'actions ou d'erreurs apparaissent en haut au centre de l'écran au besoin.
+
+SignUp: (http://localhost:8080/#/signup)
+Login : (http://localhost:8080/#/login)
+
+Recherche: 
+*En haut à gauche dans le navbar, à droite du logo UBEAT, il y a une barre de recherche. 
+Dans celle-ci: 
+1. écrire le nom d'une track, album, user, artist
+2. Sélectionner sous quel forme la recherche doit etre fait dans le menu déroulant qui se trouve à côté du input.
+    Choix: -recherche général: All
+           -recherche spécifique: artist, album, track, user
+3. Cliquer sur le bouton Search
+4. Attendre que le loading se fasse
+5. pour chaque résultat il y a des icones:
+    a) artist : bonhomme avec une note de musique
+    b) album: fond foncé avec note de musique blanche
+    c) track: note de musique foncé
+    d) user: un bonhomme simple.
+6. Pour chaque type de résultat se trouve des éléments différents:
+    a) artist: bouton pour accéder à la page de l'artiste (cliquer dessus pour y accéder)
+    b) album: 
+      -choisir dans le menu déroulant une playlist, puis cliquer sur ajouté l'album à cette playlist (bouton vert)
+      -cliquer sur le bouton bleu pour aller à la page de l'album associé
+    c)track: 
+      -choisir dans le menu déroulant une playlist, puis cliquer sur ajouté la chanson à cette playlist (bouton bleu)
+    d)user:
+      -bouton bleu pour accéder à la page du user
+      -bouton vert pour follow ce user
+
+7. Ily a de la pagination pour voir pus de résultat en bas de l'écran !
+
+
+Page Artist (http://localhost:8080/#/Artist/:id)
+  #FONCTIONNALITÉ AVANCÉ (1) : biographie.
+    1.1 Cliquer sur 'Biography', cela ouvrira le reste de la biography,
+    1.2 Recliquer pour le refermer
+  #FONCTIONNALITÉ AVANCÉ (2) : similar artist.
+    2.1 à la fin de la page il y a 'Similar to this artist...', 
+    2.2 Dans ces tags se trouvent des artists similaire à l'artiste, vous pouvez cliquer sur la loupe de chacun
+    pour activer une recherche de cette artiste puis accéder à sa page à partir de là 
+  #Voir les albums:
+    3.1 vous pouvez naviger dans le carousel pour voir les différents albums, vous pouvez aussi swipe ou utiliser les flèches ou les petits cercles
+
+  *Différentes façon d'accéder à la page Artist
+  utilisé le bouton dans HOME (ira directement à Adèle) 
+  ou
+  Faire une recherche par artist.
+    1.Cliquer sur les flèches pour voir les albums, ou laisser défiler.
+
+
+Page Album: (http://localhost:8080/#/Album/:id)
+  #Ajouter une chanson de l'album à une playlist existante:
+    1. Sélectionnez une chanson dans la liste des chansons de l'album.
+    2. Dans le menu déroulant en dessous de la liste, sélectionnez la playlist dans laquelle vous voulez ajouter la chanson sélectionnée.
+    3. Clickez sur le bouton 'Add song' en dessous de la liste.
+    4. Pour voir que la chanson a bien été ajoutée, allez voir la playlist dans la page Playlist
+
+   #Ajouter toutes les chanson de l'album à un playlist existante.
+    1. Dans le menu déroulant en dessous de la liste, sélectionnez la playlist dans laquelle vous voulez ajouter les chansons de l'album.
+    2. Clickez sur le bouton 'Add Album' en dessous de la liste.
+    3. Pour voir que les chansons ont bien été ajoutée, allez voir la playlist dans la page Playlist
+
+   #Pour lire un écouter un extrait d'une chanson de l'album:
+    1. Sélectionnez la chanson que vous voulez entendre dans la liste des chanson de l'album.
+    2. Clickez sur le bouton  play du lecteur au dessus de la liste.
+    
+  #FONCTIONNALITÉ AVANCÉ (3): histogramme de la chanson qui joue. 
+    1. Vous pouvez voir quand une chanson joue, que le player a une animation qui suit la chanson.
+
+Page User: (http://localhost:8080/#/user/:id)
+  #Voir les playlists de l'utilisateur:
+    1.par défaut le tab ouvert est celui des playlist de l'utilisateur
+  #Voir les friends:
+    2.le 2e tab à côté de Playlist, est Friends, dans celui-ci se trouve les gens qui follow
+  #follow le user:
+    1.cliquer sur le bouton follow
+  #delete le user des friends:
+    1.cliquer sur le bouton unfollow
+
+Playlist: (http://localhost:8080/#/playList)
+  #Ajouter playlist:
+    1.ajouter une playlist dans le champ «create new playlist» et cliquer sur le bouton vert.
+  #Edit nom playlist:
+    1. sélectionner une playlist en cliquant dessus dans le tableau
+    2. Écrire le nouveau nom dans le champ «edit name of {{playlist name}}»
+    3. cliquer sur Edit
+    4. Regarder le nom changer dans la liste
+  #Supprimer playlist
+    1. sélectionner une playlist en cliquant dessus dans le tableau
+    2. Cliquer sur le bouton Delete Playlist qui est rouge, à côté du bouton Edit
+
+  Vous pouvez déselectionner la playlist pour en n'avoir aucune de sélectionner avec le bouton jaune en haut du tableau.
+
+  #Pour voir les tracks d'une playlist:
+    *Si aucune playlist n'est sélectionner on ne peut pas aller dans l'onglet tracks!*
+    1. Sélectionner une playlist
+    2. Aller dans l'onglet «tracks» qui se trouve au-dessus du bouton jaune «clear selected», il s'agit du 2e après Playlist
+
+  #Supprimer tracks from playlist:
+    1. Faire les étapes 1 à 2 précédentes
+    2. Sélectionner une tracks
+    3. En haut de la liste, une tuile avec un bouton sera généré. Il contient le nom de la piste, et lebouton de suppression.
+
+  #Ajouter tracks dans la playlist:
+  *Si aucune playlist n'est sélectionner on ne peut pas aller dans l'onglet Add tracks!*
+    1. Sélectionner une playlist
+    2. Aller dans l'onglet «add tracks» qui se trouve au-dessus du bouton jaune «clear selected», il s'agit du dernier bouton.
+    3. Faire une recherche par nom de chanson, puis cliquer sur le bouton Search.
+    4. Parmis les résultats, cliquer sur le bouton associé au résultat désiré pour l'ajouter à la playlist préalablement sélectionné.
+
+
+  #Exécution des tests avec jest:
+
+    npm run test:unit
+
+  #Listes des tests exécuter pour chaque component:
+
+    1. Tester si le component est une instance vue.
+    2. Tester l'affichage des props.
