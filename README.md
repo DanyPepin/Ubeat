@@ -1,4 +1,12 @@
-# Description\
+# Description
+
+-Music web application made with vue.js.
+-Play music
+-Create a playlist
+-Search music/album/users
+-Follow your friends to see their playlists
+-Authentification with tokens
+
 
 # vue-starter
 
