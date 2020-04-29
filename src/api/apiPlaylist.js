@@ -130,3 +130,17 @@ export const searchTrack = search => {
       console.error("fetch for search dont work");
     });
 };
+export const search = term => {
+  return fetch(
+    `${url}/search/tracks?q=${encodeURIComponent(term)}&limit=10&media=music`,
+    {
+      method: "GET"
+    }
+  )
+    .then(response => {
+      return response.json();
+    })
+    .catch(() => {
+      console.error("fetch for songs failed");
+    });
+};

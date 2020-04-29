@@ -88,7 +88,11 @@ export default {
     }
   },
   addTrack(result) {
+<<<<<<< Updated upstream:src/components/addTracksPlaylist.vue
     this.$emit("addTrack", result);
+=======
+    this.$emit("update-playlist", result);
+>>>>>>> Stashed changes:src/components/addTracks.vue
   }
 };
 </script>

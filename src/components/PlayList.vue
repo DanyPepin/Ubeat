@@ -103,11 +103,14 @@ export default {
   methods: {
     addTrack(track) {
       apiPlaylist.addTrack(this.selected.id, track);
+<<<<<<< Updated upstream
       this.$buefy.toast.open({
         duration: 5000,
         message: `Track added to playlist`,
         type: "is-success"
       });
+=======
+>>>>>>> Stashed changes
     },
     //en changeant de tab, si cest le 2e onglet, ca va charger les tracks de la playlist
     onChange(value) {
